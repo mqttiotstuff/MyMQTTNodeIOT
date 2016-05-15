@@ -1,0 +1,32 @@
+@startuml
+
+title Component Diagram
+
+[Main]
+
+[Configure]
+
+Main ..> Configure :use
+
+[Sensors/Actuators Manager] as O
+
+Main ..>O :use 
+
+[MQTT MessageQueue] as M
+
+O -> M
+
+package "Sensors" {
+    [Interruptor]
+    [Temperature]
+    [WifiLocation]
+}
+
+package "Actuators" {
+    [Relay]
+}
+
+O ..> Sensors :use
+O ..> Actuators :use
+
+@enduml
