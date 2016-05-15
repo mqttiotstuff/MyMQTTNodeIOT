@@ -6,19 +6,21 @@ MyNodeIOT
 **Build your own HomeMade - Hacked Wifi MQTT devices**
 
 
-This project permit us to setup NODEMcu units, based on [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) ,  linked to a [MQTT broker](http://mqtt.org/).
+This project permit us to setup NodeMCU units, based on [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) ,  linked to a [MQTT broker](http://mqtt.org/).
 We try to give informations about device build with thoses elements.
 
 ![](architecture/ESP8266.jpg)
 
 If you have a bit time and knowledges, for a very cheap cost, you can setup your own home automation, monitoring or "Computer Managed Home Experience"
 
+Quick setup using the lua language of the NodeMCU firmware
+
 We used the principle of **#SmartHome** concepts, you can have more informations here : 
 [https://github.com/mqtt-smarthome/mqtt-smarthome](https://github.com/mqtt-smarthome/mqtt-smarthome)
 
 #Project Features
 
-- Simple scripts for creating your own IOT [MQTT](http://mqtt.org/) / [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) device
+- Simple lua scripts for creating your own IOT [MQTT](http://mqtt.org/) / [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) device
 - Extensible objects for creating new sensors or actuators
 currently :
 	- Switch
@@ -31,7 +33,7 @@ Components organisation :
 
 ---
 
-![](architecture/components.svg)
+![](architecture/components.png)
 
 
 ---
@@ -47,7 +49,7 @@ The principe is based on the [MQTT](http://mqtt.org/) protocol and Wifi Connecti
 here is the big picture (logical view).
 
 
-![](architecture/iotnodemcu.svg)
+![](architecture/iotnodemcu.png)
 
 
 MQTT provide fast and lightweight protocol to make it work.
