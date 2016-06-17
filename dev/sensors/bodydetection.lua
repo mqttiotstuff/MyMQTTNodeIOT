@@ -7,14 +7,10 @@
 -- ***************************************************************************
 --  this module when triggered, push the events
 
-Interruptor = {}
+BodyDetect = {}
 
-function Interruptor:new (o) 
+function BodyDetect:new (o) 
      o = o or {} 
-
-     if not o.pin then
-         error("pin not specified")
-     end
 
      if not o.name then
          error("name not specified")
@@ -24,56 +20,60 @@ function Interruptor:new (o)
      
      setmetatable(o, self)
      self.__index = self
+
+     local bdlast = 0
+
+     print("init body detector")
+     adc.force_init_mode(adc.INIT_ADC)
+
+
+
+     -- timer for getting the information
+     tmr.alarm(0, 100, 1, function() 
     
-     gpio.mode(o.pin, gpio.INT, gpio.PULLUP)
-     local p = o.pin
-     local my = self
-     local triggercallback = function(level)
-    
-        local state = gpio.read(p)
-        local f = o:getcallback() 
-        
+        local f =  o:getcallback() 
         if f ~= nil then
-            -- print("call")
-            o.value = state
-            f.callback(state)
+            local v= adc.read(0)
+            local status = (v<400)
+            if status ~= bdlast then
+                o.value = status 
+                bdlast = status
+                -- print(status)
+                f.callback(tostring(status))
+            end
         end 
-        -- print("end call")
-        
-    end
-     gpio.trig(o.pin, "both", triggercallback)
-
-
+     end)
+ 
      
      return o
 end
 
-function Interruptor:issensor()
+function BodyDetect:issensor()
     return true
 end
 
 
 -- define the change callback, 
 -- the function is called with (self, state)
-function Interruptor:changecallback(cb)
+function BodyDetect:changecallback(cb)
     self.callback = cb 
 end
 
-function Interruptor:getcallback()
+function BodyDetect:getcallback()
     return self.callback
 end
 
-function Interruptor:getpin() 
+function BodyDetect:getpin() 
     return self.pin
 end
 
-function Interruptor:getname()
+function BodyDetect:getname()
     return self.name
 end
 
-function Interruptor:getvalue()
+function BodyDetect:getvalue()
     return self.value
 end
 
-return Interruptor
+return BodyDetect
 

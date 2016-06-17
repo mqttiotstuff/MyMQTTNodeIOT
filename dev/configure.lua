@@ -14,9 +14,10 @@
 --Interruptor = require("interrupt")
 --Temperature = require("temperature")
 --Relay = require("relay")
-
-LocationByWifi = require("locationbywifi")
-
+--LocationByWifi = require("locationbywifi")
+Led8 = require("led8")
+--BD = require("bodydetection")
+ADC = require("adcesp")
 
 local Parameters = {
 
@@ -25,19 +26,19 @@ local Parameters = {
 
     --- ssid define the id of the wifi endpoint connection
     --- pwd define the wifi connection password
-    SSID = "REPLACE_WITH_YOUR_WIFI_ID",
-    PWD = "REPLACE_WITH_YOUR_WIFI_CONNEXION",
+    SSID = "",
+    PWD = "",
 
     --- device id is the id of the mqtt sensor root queue
     --- and the connexion to the mqtt broker
-    DEVICEID = "esp02",
+    DEVICEID = "esp03",
 
     
     --- define here the MQTT connection parameters
     MQTTBROKER = "mqtt.frett27.net",
    
     --- define the mqtt client id for connection to the mqtt broker 
-    MQTTCLIENTID = "clientid2"
+    MQTTCLIENTID = "clientid3"
 
 }
 
@@ -68,9 +69,17 @@ function Configure.hardwardConfigure(allobjects)
     -- local r2 = Relay:new({pin = 0, name="relay2"})
     -- allobjects:add(r2)
 
-    local wl = LocationByWifi:new({name="wifilocation"})
-    allobjects:add(wl)
+    --local wl = LocationByWifi:new({name="wifilocation"})
+    --allobjects:add(wl)
 
+    local l8 = Led8:new({name="led8",leds=64})
+    allobjects:add(l8)
+
+    --local bdd = BD:new({name="body"})
+    --allobjects:add(bdd)
+
+    local a = ADC:new({name="adc"})
+    allobjects:add(a)
 
 end
 

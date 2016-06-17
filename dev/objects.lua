@@ -28,8 +28,8 @@ function Objects:sensorchanged(sensor, value)
 
     if self.pub and value ~= nil then
 
-       print("sensor ".. sensor:getname() .. " changed :" .. value)
-       
+       print("sensor ".. sensor:getname() .. " changed :" .. tostring(value))
+        
        -- enqueue or send the message
        self.pub(self.baseMQTTPath .. "/sensors/" .. sensor:getname(),value, 2, true)
       
@@ -41,7 +41,7 @@ end
 -- for all sensors, then they can callback to signal
 -- a value changed
 function Objects:register()
-
+     local s = ""
      for k,v in pairs(self.objects) do
         if v.issensor then
             --has a is sensor method
@@ -63,9 +63,14 @@ function Objects:register()
          
                 end)
             end
+           
         end
+        if string.len(s) > 0 then
+            s = s .. ","
+        end
+        s = s .. v:getname()
      end
-
+     self.pub(self.baseMQTTPath,s,2, true) 
 
     -- on message received event (especially for actuators)
     self.m:on("message", function(conn, topic, data) 

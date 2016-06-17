@@ -13,12 +13,15 @@
 Objects = require("objects")
 C = require("configure")
 local P = C.parameters()
-
+ 
 print(node.heap())
 
 local deviceID = P["DEVICEID"];
-local baseMQTTPath = "home/" .. deviceID;
-local broker = P["MQTTBROKER"]
+local baseMQTTPath = "home/" .. deviceID
+local broker = P["MQTTBROKER"];
+if broker == nil then
+    error("no broker config")
+end
 
 
 allobjects = nil 
@@ -46,7 +49,7 @@ print("connect")
 
 wifi.sta.connect()
 
-print("connected to wifi")
+-- print("connected to wifi")
 
 -- init mqtt client with keepalive timer 120sec
 local m = mqtt.Client(P["MQTTCLIENTID"], 10, deviceID, deviceID)
@@ -61,14 +64,13 @@ m:lwt(baseMQTTPath .. "/status", "offline", 0, 0)
 m:on("connect", function(con) 
     print("connected to mqtt,  init the objects ")
 
-
     allobjects = Objects:new(baseMQTTPath, m)
     
     C.hardwardConfigure(allobjects)
     
-    print("registering ...")
+    -- print("registering ...")
     allobjects:register()
-    print("... registration done")
+    -- print("... registration done")
     
 end)
 
@@ -90,12 +92,10 @@ end)
 
 
 print ("connect to mqtt " .. broker)
--- for secure: m:connect("192.168.11.118", 1880, 1)
-m:connect(broker, 1883, 0, true, function(conn) 
 
-    print("connected to mqtt broker") 
-    
-end, function (client, reason)
+m:connect(broker, 1883, 0, true, function(conn) 
+    print("connected to mqtt broker "..tostring(conn)) 
+    end, function (client, reason)
     print("error in connecting " .. reason)
 end)
 

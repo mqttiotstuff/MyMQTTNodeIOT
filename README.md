@@ -110,3 +110,15 @@ NodeMCU Firmware documentation:
 [http://nodemcu.readthedocs.io/](http://nodemcu.readthedocs.io/)
 
 An other article on the same subject (french): [http://www.framboise314.fr/linternet-des-objets-iot-sur-raspberry-pi-avec-mqtt/](http://www.framboise314.fr/linternet-des-objets-iot-sur-raspberry-pi-avec-mqtt/)
+
+
+#Projects made with it
+
+Two examples have been setted up :
+
+
+[SimpleDevice 01](hardware/SimpleDevice01/index.md)
+
+
+
+[SimpleDevice 02](hardware/SimpleDevice02/index.md)
