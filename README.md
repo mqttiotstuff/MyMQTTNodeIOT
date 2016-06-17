@@ -26,7 +26,10 @@ currently :
 	- Switch
 	- DHT11 temperature sensor
 	- Relays
+	- ADC input
+	- Body Sensor detector
 	- WifiLocation (providing informations on the indoor location of the device)
+	- LED matrix display based on WS2812 embedded controller
 
 
 Components organisation :
