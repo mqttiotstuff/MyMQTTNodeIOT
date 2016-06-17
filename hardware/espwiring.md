@@ -19,3 +19,5 @@ Additional pins can be externalize for GPIO or ADC.
 
 
 ![p3.jpg](p3.jpg)
+
+and you're ready to go
