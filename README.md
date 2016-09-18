@@ -30,6 +30,7 @@ currently :
 	- Body Sensor detector
 	- WifiLocation (providing informations on the indoor location of the device)
 	- LED matrix display based on WS2812 embedded controller
+	- RGB Led strips (PWM controlled)
 
 
 Components organisation :
@@ -117,11 +118,13 @@ An other article on the same subject (french): [http://www.framboise314.fr/linte
 
 #Projects made with it
 
-Two examples have been setted up :
+Examples setted up :
 
 
 [SimpleDevice 01](hardware/SimpleDevice01/index.md)
 
 
-
 [SimpleDevice 02](hardware/SimpleDevice02/index.md)
+
+
+[SimpleDevice 03](hardware/SimpleDevice03/index.md)
