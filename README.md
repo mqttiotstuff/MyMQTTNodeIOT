@@ -123,8 +123,8 @@ Examples setted up :
 
 [SimpleDevice 01](hardware/SimpleDevice01/index.md)
 
-
 [SimpleDevice 02](hardware/SimpleDevice02/index.md)
 
-
 [SimpleDevice 03](hardware/SimpleDevice03/index.md)
+
+[SimpleDevice 04](hardware/SimpleDevice04/index.md)
