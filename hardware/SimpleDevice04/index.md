@@ -24,4 +24,16 @@ in this device, we used :
 this module is a wrapper to [https://github.com/avaldebe/AQmon](https://github.com/avaldebe/AQmon) BMP 280 module
 
 
+##Sleep mode
+
+As it is powered by a battery, saving the battery is important, 
+we connect the GPIO 16 to RST pin, permitting to deepsleep mode the chip
+
+so we have measures on 20s every 10 mins (initially configured).
+
+Measuring the consumption is about :
+70-80 mA in measuring the air
+down to 5mA in sleep mode for 10 mins
+
+
 
