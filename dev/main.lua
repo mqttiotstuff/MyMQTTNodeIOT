@@ -51,8 +51,8 @@ wifi.sta.connect()
 
 -- print("connected to wifi")
 
--- init mqtt client with keepalive timer 120sec
-local m = mqtt.Client(P["MQTTCLIENTID"], 10, deviceID, deviceID)
+-- init mqtt client with keepalive timer 10 sec, clean session
+local m = mqtt.Client(P["MQTTCLIENTID"], 10, deviceID, deviceID, 1)
 
 
 
