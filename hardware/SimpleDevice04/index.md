@@ -37,3 +37,10 @@ down to 5mA in sleep mode for 10 mins
 
 
 
+## Update 12/02/2017
+
+Added a Lithium Ion protection card for avoid crash the battery (if battery is too low, it is destroyed by chemical modifications). Added an external DC - DC converter for charging phase
+
+Latest tests show that using the hibernate mode if ESP 8266, and 15 mins wakeup for 5 measures , the batteries charge life is about 3-4 days.
+
+![](20170212_202507.jpg)
