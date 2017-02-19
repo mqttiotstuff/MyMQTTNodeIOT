@@ -31,5 +31,9 @@ mqtt paho library is used , to install it,  see :  https://pypi.python.org/pypi/
 
 
 
+to run the agent in background, use the screen command to be able to see afterward the logs, or be able to disconnect the ssh connection without having to terminate the process.
+
+
+
 
 
