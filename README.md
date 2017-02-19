@@ -1,3 +1,4 @@
+
 MyNodeIOT
 =======
 
@@ -22,15 +23,15 @@ We used the principle of **#SmartHome** concepts, you can have more informations
 
 - Simple lua scripts for creating your own IOT [MQTT](http://mqtt.org/) / [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) device
 - Extensible objects for creating new sensors or actuators
-currently :
-	- Switch
-	- DHT11 temperature sensor
-	- Relays
-	- ADC input
-	- Body Sensor detector
-	- WifiLocation (providing informations on the indoor location of the device)
-	- LED matrix display based on WS2812 embedded controller
-	- RGB Led strips (PWM controlled)
+  currently :
+  - Switch
+  - DHT11 temperature sensor
+  - Relays
+  - ADC input
+  - Body Sensor detector
+  - WifiLocation (providing informations on the indoor location of the device)
+  - LED matrix display based on WS2812 embedded controller
+  - RGB Led strips (PWM controlled)
 
 
 Components organisation :
@@ -38,7 +39,6 @@ Components organisation :
 ---
 
 ![](architecture/components.png)
-
 
 ---
 
@@ -78,6 +78,9 @@ Minimum Software Installed :
 	a Device using this project : 
 		NodeMCU - Firmware
 		the current Lua scripts, adjusted on the use
+
+additional nodes can be added as a storage node for making queries in a time-framed manner. In my case i used a dockerised imfluxdb on an orangepi node
+
 
 
 #Software Stuff

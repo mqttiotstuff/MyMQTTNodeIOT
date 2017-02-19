@@ -9,7 +9,7 @@ This sensor use the BMP280 chipset to measure Temperature / Pression and Humidit
 - 3,3 regulator
 - 2 lipo 3,7V Batteries - 3000 mAh
 
-The device looks like this :
+The original design device looks like this :
 
 ![device.jpg](device.jpg) 
 
@@ -33,7 +33,9 @@ so we have measures on 20s every 10 mins (initially configured).
 
 Measuring the consumption is about :
 70-80 mA in measuring the air
-down to 5mA in sleep mode for 10 mins
+down to 5mA in sleep mode for 10 mins 
+
+battery lifetime is by now about a week.
 
 
 
@@ -43,4 +45,10 @@ Added a Lithium Ion protection card for avoid crash the battery (if battery is t
 
 Latest tests show that using the hibernate mode if ESP 8266, and 15 mins wakeup for 5 measures , the batteries charge life is about 3-4 days.
 
+
+
 ![](20170212_202507.jpg)
+
+
+
+![](infos.png)
