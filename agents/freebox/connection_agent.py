@@ -19,7 +19,7 @@ import traceback
 config = ConfigParser.RawConfigParser()
 
 
-WIFI_ROOT = "home/agents/wifi"
+CONNECTION_ROOT = "home/agents/freeboxconnection"
 
 
 import freebox
@@ -73,17 +73,11 @@ while True:
             cnx_reconnect = 100
 
 	# query the box
-	ap = f.com("wifi/ap/0/stations")['result']
+	ap = f.com("/connection")['result']
 
-	result = map(lambda x:(x['mac'],x['hostname'],x["signal"]), ap)
-	for (mac,hostname,signal) in result:
-	    hostname = string.replace(hostname,"+","_")
-	    # print hostname
-	    client2.publish(WIFI_ROOT + "/hostname/" + hostname, str(signal))
-	    client2.publish(WIFI_ROOT + "/mac/" + mac, str(signal))
+        for k,v in ap.items():
+	    client2.publish(CONNECTION_ROOT + "/" + k , str(v))
 
-	s = reduce(lambda a,x: a+";"+str(x[0]), result,"")
-	client2.publish(WIFI_ROOT + "/all",str(s))
     except Exception as e:
         exc_type, exc_value, exc_traceback = sys.exc_info()
         traceback.print_tb(exc_traceback)
