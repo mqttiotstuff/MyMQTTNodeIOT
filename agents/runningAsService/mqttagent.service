@@ -1,0 +1,17 @@
+[Unit]
+Description=MqttAgents
+After=multi-user.target
+
+[Service]
+StandardOutput=console
+User=pi
+Group=pi
+ExecStart=/bin/bash /home/pi/mqttagent/launch_all.sh
+WorkingDirectory=/home/pi/
+Type=simple
+KillMode=none
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
