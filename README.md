@@ -19,7 +19,7 @@ Quick setup using the lua language of the NodeMCU firmware
 We used the principle of **#SmartHome** concepts, you can have more informations here : 
 [https://github.com/mqtt-smarthome/mqtt-smarthome](https://github.com/mqtt-smarthome/mqtt-smarthome)
 
-#Project Features
+# Project Features
 
 - Simple lua scripts for creating your own IOT [MQTT](http://mqtt.org/) / [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) device
 - Extensible objects for creating new sensors or actuators
@@ -42,9 +42,9 @@ Components organisation :
 
 ---
 
-#How this work ?
+# How this work ?
 
-##The logical view:
+## The logical view:
 
 The principe is based on the [MQTT](http://mqtt.org/) protocol and Wifi Connection and associated tools.  The [MQTT broker](http://mqtt.org/) collect and distribute the information among the devices, permitting to dissociate sensor, actuators and the usage of them.
 
@@ -61,7 +61,7 @@ MQTT provide fast and lightweight protocol to make it work.
 In a simple implementation, we used a Rasberry PI computer connecter to the ISP box for providing the MQTT broker and private wifi HotSpot.
 
 
-##The physical view
+## The physical view
 
 This is much simple on the physical side, only a RPI, and devices.
 
@@ -83,14 +83,14 @@ additional nodes can be added as a storage node for making queries in a time-fra
 
 
 
-#Software Stuff
+# Software Stuff
 
 Installing Mosquitto on RPI linux : [http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/](http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/)
 
 
-#Hardware Stuff
+# Hardware Stuff
 
-##Parts we haved used in project
+## Parts we haved used in project
 
 ESP12 - module : [http://www.banggood.com/ESP8266-ESP-12E-Remote-Serial-Port-WIFI-Transceiver-Wireless-Module-p-980984.html](http://www.banggood.com/ESP8266-ESP-12E-Remote-Serial-Port-WIFI-Transceiver-Wireless-Module-p-980984.html)
 
@@ -101,13 +101,13 @@ FTDI - for sending the program to the chip : [http://www.banggood.com/FT232RL-FT
 other passif/actif components, 7803 and 7805 for 5v and 3.3v regulator, 
 resistors, condensators
 
-##Before starting :
+## Before starting :
 
 Before starting you can have more informations on NodeMCU firmware here : 
 [http://fr.slideshare.net/geekscape/nodemcu-esp8266-workshop-1](http://fr.slideshare.net/geekscape/nodemcu-esp8266-workshop-1)
 
 
-#Further readings (links)
+# Further readings (links)
 
 [http://www.penninkhof.com/2015/05/linking-the-esp8266-a-raspberry-pi-through-mqtt/](http://www.penninkhof.com/2015/05/linking-the-esp8266-a-raspberry-pi-through-mqtt/)
 
@@ -119,7 +119,7 @@ NodeMCU Firmware documentation:
 An other article on the same subject (french): [http://www.framboise314.fr/linternet-des-objets-iot-sur-raspberry-pi-avec-mqtt/](http://www.framboise314.fr/linternet-des-objets-iot-sur-raspberry-pi-avec-mqtt/)
 
 
-#Projects made with it
+# Projects made with it
 
 Examples setted up :
 
