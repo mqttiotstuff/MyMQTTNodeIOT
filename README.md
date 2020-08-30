@@ -19,6 +19,12 @@ This project provide examples, and implementation to setup NodeMCU units , based
 
 ![](architecture/ESP8266.jpg)
 
+
+
+![](devices.png)
+
+
+
 If you have a bit time and knowledges, for a very cheap cost but time, you can setup your own home automation, monitoring or "Computer Managed Home Experience"
 
 Using Lua save time in setup and development, and reduce the needed knowledge.
