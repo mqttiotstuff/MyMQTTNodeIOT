@@ -111,13 +111,7 @@ a common stack implemented in NodeMCU, using lua, implements :
 
 As the device can be used as either dumb sensors , agents have been implemented to support "high level" decisions.  
 
-
-
-
-
-
-
-
+Led display control, animations are done using agents implemented in python.
 
 
 
@@ -160,12 +154,26 @@ An other article on the same subject (french): [http://www.framboise314.fr/linte
 
 
 
-[SimpleDevice 01](hardware/SimpleDevice01/index.md)
+[SimpleDevice 01](hardware/SimpleDevice01/index.md)  - Relay Handling
 
 [SimpleDevice 01 V2](hardware/SimpleDevice01_V2/v2.md)
 
-[SimpleDevice 02](hardware/SimpleDevice02/index.md)
+![](hardware/SimpleDevice01_V2/device.jpg)
 
-[SimpleDevice 03](hardware/SimpleDevice03/index.md)
+[SimpleDevice 02](hardware/SimpleDevice02/index.md) - Led screen display device with switch and body sensor
 
-[SimpleDevice 04](hardware/SimpleDevice04/index.md)
+![](hardware/SimpleDevice02/device.jpg)
+
+[SimpleDevice 03](hardware/SimpleDevice03/index.md) - Led strip light, with body detector and switch
+
+![](hardware/SimpleDevice03/device.jpg)
+
+[SimpleDevice 04](hardware/SimpleDevice04/index.md) - Battery Autonomous Humidity, Pression, Temperature sensor
+
+![](hardware/SimpleDevice04/device.jpg)
+
+
+
+[SimpleDevice05](hardware/SimpleDevice05) Led Screen Display
+
+![](hardware/SimpleDevice05/ledbox2.jpg)
