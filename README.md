@@ -160,6 +160,10 @@ An other article on the same subject (french): [http://www.framboise314.fr/linte
 
 
 
+[SimpleDevice05](hardware/SimpleDevice05/index.md) Led Screen Display
+
+![](hardware/SimpleDevice05/ledbox2.jpg)
+
 [SimpleDevice 01](hardware/SimpleDevice01/index.md)  - Relay Handling
 
 [SimpleDevice 01 V2](hardware/SimpleDevice01_V2/v2.md)
@@ -178,8 +182,3 @@ An other article on the same subject (french): [http://www.framboise314.fr/linte
 
 ![](hardware/SimpleDevice04/device.jpg)
 
-
-
-[SimpleDevice05](hardware/SimpleDevice05/index.md) Led Screen Display
-
-![](hardware/SimpleDevice05/ledbox2.jpg)
