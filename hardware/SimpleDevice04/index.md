@@ -13,8 +13,7 @@ The original design device looks like this :
 
 ![device.jpg](device.jpg) 
 
-
-##Software components
+## Software components
 
 in this device, we used :
 
@@ -23,8 +22,7 @@ in this device, we used :
 
 this module is a wrapper to [https://github.com/avaldebe/AQmon](https://github.com/avaldebe/AQmon) BMP 280 module
 
-
-##Sleep mode
+## Sleep mode
 
 As it is powered by a battery, saving the battery is important, 
 we connect the GPIO 16 to RST pin, permitting to deepsleep mode the chip
@@ -43,7 +41,7 @@ battery lifetime is by now about a week.
 
 Added a Lithium Ion protection card for avoid crash the battery (if battery is too low, it is destroyed by chemical modifications). Added an external DC - DC converter for charging phase
 
-Latest tests show that using the hibernate mode if ESP 8266, and 15 mins wakeup for 5 measures , the batteries charge life is about 3-4 days.
+Latest tests show that using the hibernate mode if ESP 8266, and 15 mins wakeup for 5 measures , the batteries charge life is about 15 days.
 
 
 
