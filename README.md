@@ -174,6 +174,6 @@ An other article on the same subject (french): [http://www.framboise314.fr/linte
 
 
 
-[SimpleDevice05](hardware/SimpleDevice05) Led Screen Display
+[SimpleDevice05](hardware/SimpleDevice05/index.md) Led Screen Display
 
 ![](hardware/SimpleDevice05/ledbox2.jpg)
