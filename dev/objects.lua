@@ -7,8 +7,6 @@
 -- MIT license, http://opensource.org/licenses/MIT
 -- ***************************************************************************
 
-
-
 Objects = { }
 
 -- construct a new object, with m
@@ -27,11 +25,9 @@ end
 function Objects:sensorchanged(sensor, value)
 
     if self.pub and value ~= nil then
-
-       print("sensor ".. sensor:getname() .. " changed :" .. tostring(value))
-        
+       -- print("sensor ".. sensor:getname() .. " changed :" .. tostring(value))
        -- enqueue or send the message
-       self.pub(self.baseMQTTPath .. "/sensors/" .. sensor:getname(),value, 2, true)
+       self.pub(self.baseMQTTPath .. "/sensors/" .. sensor:getname(),value, 1, true)
       
     end
 end
@@ -73,40 +69,23 @@ function Objects:register()
      self.pub(self.baseMQTTPath,s,2, true) 
 
     -- on message received event (especially for actuators)
-    self.m:on("message", function(conn, topic, data) 
-     local datasnapshot = data
-     local topicsnapshot = topic
-     
-     print(topic .. ":" , topic) 
-     for k,v in pairs(self.objects) do
-        -- watch for actuators
-        if v.issensor and not v:issensor() then
-            -- does the message is for v ?
-            if topicsnapshot == self.baseMQTTPath .. "/actuators/" .. v:getname() then
-
-                    print("topic")
-                    print(topic)
-                    print("message:")
-                    print(message)
-
-                    print("evaluate")
-                    -- received message
-                    
-                    print("provide")
-                    print(datasnapshot)
-                    v:providevalue(datasnapshot)
-                        
-                    
-            end --topic
-          end -- sensor  
-        end -- for
-      
+     self.m:on("message", function(conn, topic, data) 
+         local datasnapshot = data
+         local topicsnapshot = topic
+         
+         -- print(topic .. ":" , topic) 
+         local k,v
+         for k,v in pairs(self.objects) do
+            -- watch for actuators
+            if v.issensor and not v:issensor() then
+                -- does the message is for v ?
+                if topicsnapshot == self.baseMQTTPath .. "/actuators/" .. v:getname() then
+                        v:providevalue(datasnapshot)
+                end --topic
+              end -- sensor  
+            end -- for
+          
     end) -- on
-
-
-
-     
-     
 end
 
 
@@ -122,11 +101,9 @@ function Objects:list()
     l = {}
     for k,v in pairs(self.objects) do 
         table.insert(l, k) 
-        -- print( "added in list ".. k)
     end
     return l
 end
-
 
 return Objects
 

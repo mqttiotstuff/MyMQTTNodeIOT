@@ -43,8 +43,13 @@ function Relay:providevalue(v)
     if v ~= nil and type(v) == "string" then
         local status = tonumber(v)
         if (status == 0 or status == 1) then 
-            gpio.write(self:getpin(), status)
+    
+             gpio.mode(self:getpin(), gpio.OUTPUT)
+             gpio.write(self:getpin(), status)
+            
             self.value = status
+
+            
         end
     end
 end

@@ -22,7 +22,7 @@ do
         -- print(tp[1])
         -- print(tp[2])
         -- print("publish " .. tp[1] ..":" .. tp[2])
-        client:publish(tp[1], tp[2], 0, 0, send)
+        client:publish(tp[1], tp[2], 1, 0, send)
       else
         is_sending = false
       end

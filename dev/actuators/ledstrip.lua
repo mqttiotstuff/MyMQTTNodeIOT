@@ -44,13 +44,14 @@ end
 
 -- message received for changing the value
 function LEDStrip:providevalue(v)
-    print("changed value")
-    print(v)
+    -- print("changed value")
+    -- print(v)
     if v ~= nil and type(v) == "string" then
         -- split the values
+        local r,g,b
         for r,g,b in string.gmatch(v, "(%d+),(%d+),(%d+)") do
-            pwm.setduty(self:getpin(), tonumber(r))
-            pwm.setduty(self:getpin()+1, tonumber(g))
+            pwm.setduty(self:getpin()+1, tonumber(r))
+            pwm.setduty(self:getpin(), tonumber(g))
             pwm.setduty(self:getpin()+2, tonumber(b))
         end
         self.value = v
