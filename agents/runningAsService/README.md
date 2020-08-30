@@ -1,17 +1,14 @@
 # Running agents as service
 
+Sample to install agents launch in systemd services. 
 
+Here is the procedure used ,for testing purpose, to run the agents at boot time (avoiding to run them at every startup)
 
-This is someting trinky to run script at startup from systemd, especially if there are bash scripts / python scripts.
+1 - create the .service file
 
-here is the procedure i used for testing purpose to run the agents at boot time (avoiding to run them at every startup)
+the .service file must be located in /lib/systemd/system
 
-1 - create the .service
-
-here is an example of a unique script running, remember this is not a production ready procedure as the process is not monitored in case of failure, systemd is able to rerun the process if it fails.
-
-
-
+the file :
 ```
 [Unit]
 Description=MqttAgents
@@ -33,13 +30,15 @@ WantedBy=multi-user.target
 ```
 
 
-
-copy the .service file to /lib/systemd/system
-
 2 - register the service
 
 ```
 sudo systemctl enable mqttagents.service
 ```
 
-3 - test the run
+3 - test the launch
+
+```
+sudo systemctl start mqttagents
+```
+
