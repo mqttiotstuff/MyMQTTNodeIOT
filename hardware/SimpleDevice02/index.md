@@ -1,6 +1,6 @@
-#Simple led device
+# Led screen display device
 
-an other device setted up, use the LED 8x8 matrix. 
+An other device setted up, use the LED 8x8 matrix. 
 part : [http://www.banggood.com/CJMCU-64-Bit-WS2812-5050-RGB-LED-Driver-Development-Board-p-981678.html](http://www.banggood.com/CJMCU-64-Bit-WS2812-5050-RGB-LED-Driver-Development-Board-p-981678.html)
 
 we used an interruptor for interacting with the device, and coupled a luminosity detector. This could help adjusting the luminosity associated to the led control.
@@ -14,7 +14,7 @@ the lex matrix is in front and all the other stuff is in back.
 
 you can have a details view of the ESP connections
 
-##Software components
+## Software components
 
 in this device, we used :
 
@@ -22,8 +22,7 @@ in this device, we used :
 - a luminosity detector connected to the ADC pin
 - an interruptor using an other gpio connection
 
-
-##Associated Agent 
+## Associated Agent 
 
 The led device take the input from the mqtt queue, and display it, an MQTT agent translate the display wishes into the different screen states.
 

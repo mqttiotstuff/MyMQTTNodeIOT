@@ -1,4 +1,4 @@
-#Precision Temperature / Pression / Humidity sensor
+# Precision Temperature / Pression / Humidity sensor
 
 This sensor use the BMP280 chipset to measure Temperature / Pression and Humidity
 

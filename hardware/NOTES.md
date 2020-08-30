@@ -1,9 +1,13 @@
-#Prise de note sur l'ESP8266 - ESP12
+# Notes
+
+
+
+## Flashing ESP12 (no CH340 - USB interface), using FTDI
 
 Brochage ESP12:
 
-RESET : pull up 2,2kohm V+
-CH_PD : pull up 2,2kohm V+
+RESET : pull up 2,2kohm -> V+
+CH_PD : pull up 2,2kohm -> V+
 GPIO15 : GND
 
 
@@ -22,8 +26,7 @@ Vitesse de connection :
 	
 	OK
 
-
-##Flash firmware node MCU
+## Flash firmware node MCU
 
 utilisation du logiciel de flash avec les paramètres par défaut
 
@@ -40,10 +43,15 @@ procedure :
 
 le courant norminal doit être de 60 ma
 
-##NodeMCU
 
-on peut utiliser alors esplorer pour programmer.
+
+
+
+## NodeMCU
+
+On peut utiliser alors esplorer pour programmer, envoyer les fichiers
 	
+
 	PORT OPEN 9600
 	
 	Communication with MCU...
@@ -60,26 +68,4 @@ on peut utiliser alors esplorer pour programmer.
 	23152
 
 
-
-#Projet réalisé en hardware
-
-![](20160507_201657.jpg)
-
-Boitier contenant :
-
-- capteur de température et d'humidité
-- 2 commandes de relais
-- un interrupteur de communication
-
-ESP12 - DHT 11 - Relais
-Etage d'alimentation : 7805 - 5v, module 3,3v bangood
-
-
-#Pilotage - Branchements de commande sur l'ESP 12
-
-Relai 1 : gpio0
-Relai 2 : gpio6
-Température DHT11: gpio2
-
-Programmation : TX : brun, RX : Rouge, GND : noir
 
