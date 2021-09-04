@@ -197,6 +197,14 @@ An other article on the same subject (french): [http://www.framboise314.fr/linte
 
 ![](hardware/SimpleDevice05/ledbox2.jpg)
 
+
+
+[Growing Plant Station](hardware/GrowingStation/README.md)
+
+![Growing Plant Station](hardware/GrowingStation/images/global_view.jpg)
+
+
+
 [SimpleDevice 01](hardware/SimpleDevice01/index.md)  - Relay Handling
 
 [SimpleDevice 01 V2](hardware/SimpleDevice01_V2/v2.md)
