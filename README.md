@@ -23,7 +23,7 @@ This project provide examples, and implementation to setup NodeMCU units , based
 
 ![](devices.png)
 
-
+![Growing Plant Station](hardware/GrowingStation/images/global_view.jpg)
 
 If you have a bit time and knowledges, for a very cheap cost but time, you can setup your own home automation, monitoring or "Computer Managed Home Experience"
 
