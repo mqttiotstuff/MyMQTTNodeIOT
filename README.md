@@ -11,7 +11,7 @@ We used the principle of **#SmartHome** concepts, you can have more informations
 
 **Build your own HomeMade - Hacked Wifi MQTT devices**
 
-This project provide examples, and implementation to setup NodeMCU units , based on [ESP8266](https://fr.wikipedia.org/wiki/ESP8266) ,  publishing information or taking commands from a [MQTT broker](http://mqtt.org/).
+This project provide examples, and implementation to setup NodeMCU units , based on [ESP8266](https://fr.wikipedia.org/wiki/ESP8266)  and ESP32 families. These devices publish informations or taking commands from a [MQTT broker](http://mqtt.org/).
 
 **ESP** microchip family, is a quite nice and cheap piece for setting up custom solution, for less that 3$ you have an embedded microcontroller for handling the bridge between the software and physical world.
 
