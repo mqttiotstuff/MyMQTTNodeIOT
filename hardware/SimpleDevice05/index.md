@@ -8,6 +8,8 @@ Led Band controlling permit to animate the display, depending on the feedback
 
 [Dynamic Video Demonstration](https://www.youtube.com/watch?v=edEmEUA4E-M)
 
+[See the mqtt-agent-ledbox repository for more informations for controlling agent (animations, and language)](https://github.com/mqttiotstuff/mqtt-agent-ledbox)
+
 Behave like a screen, using agent to control the display animation and behaviour.
 
 
